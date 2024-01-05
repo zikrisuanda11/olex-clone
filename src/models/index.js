@@ -13,10 +13,6 @@ db.product.belongsTo(db.user, {
   foreignKey: 'user_id',
 })
 
-db.category.hasMany(db.product, {
-  foreignKey: 'category_id',
-})
-
 db.user.hasMany(db.product, {
   foreignKey: 'user_id',
 })

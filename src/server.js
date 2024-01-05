@@ -7,7 +7,7 @@ const __basedir = path.resolve()
 const app = express()
 dotenv.config()
 
-let whitelist = ['http://localhost:8080']
+let whitelist = ['*']
 let corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1 || !origin) {
@@ -55,6 +55,6 @@ require('./routes/upload.route')(app)
 require('./routes/ads.route')(app)
 
 const PORT = process.env.APP_PORT || 5000
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server is running on port http://localhost:${PORT}`)
 })

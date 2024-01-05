@@ -4,10 +4,6 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.INTEGER,
       allowNull: false,
     },
-    category_id: {
-      type: Sequelize.INTEGER,
-      allowNull: false,
-    },
     title: {
       type: Sequelize.STRING,
       allowNull: false,
